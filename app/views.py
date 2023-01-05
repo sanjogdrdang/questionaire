@@ -1225,8 +1225,10 @@ def question1(request):
         patient.save()
     elif patient.healthgoal == "fitness":
         patient.question1= "How would you describe your energy levels?"
+        patient.save()
     elif patient.healthgoal == "Gut Improvement":
         patient.question1= "Which of the following symptoms best describe your problem?"
+        patient.save()
         
 
 
@@ -3123,6 +3125,10 @@ def result(request):
             list.append(str(test[85]))
             list.append(str(test[29]))
             list.append(str(test[39]))
+            pk_id=request.session.get("pk_id")
+            patient=Patient.objects.get(patient_id=pk_id)
+            patient.tests=list
+            patient.save()
         elif patient.diet_answer == "nonveg":
             Test.objects.all()
             list.append(str(test[26]))
@@ -3130,6 +3136,10 @@ def result(request):
             list.append(str(test[23]))
             list.append(str(test[43]))
             list.append(str(test[87]))
+            pk_id=request.session.get("pk_id")
+            patient=Patient.objects.get(patient_id=pk_id)
+            patient.tests=list
+            patient.save()
         elif patient.diet_answer == "Gluten Free":
             Test.objects.all()
             list.append(str(test[26]))
@@ -3137,6 +3147,10 @@ def result(request):
             list.append(str(test[23]))
             list.append(str(test[43]))
             list.append(str(test[87]))
+            pk_id=request.session.get("pk_id")
+            patient=Patient.objects.get(patient_id=pk_id)
+            patient.tests=list
+            patient.save()
         elif patient.diet_answer == "Keto":
             Test.objects.all()
             list.append(str(test[11]))
@@ -3146,12 +3160,100 @@ def result(request):
             list.append(str(test[29]))
             list.append(str(test[85]))
             list.append(str(test[38]))
+            pk_id=request.session.get("pk_id")
+            patient=Patient.objects.get(patient_id=pk_id)
+            patient.tests=list
+            patient.save()
         elif patient.diet_answer == "High Protien":
             Test.objects.all()
             list.append(str(test[83]))
             list.append(str(test[93]))
             list.append(str(test[95]))
             list.append(str(test[27]))
+            pk_id=request.session.get("pk_id")
+            patient=Patient.objects.get(patient_id=pk_id)
+            patient.tests=list
+            patient.save()
+    if patient.question1 == "Which of the following symptoms best describe your problem?":
+        if patient.answer1 == "Gastritis/ Acidity/ GERD":
+            Test.objects.all()
+            list.append(str(test[80]))
+            list.append(str(test[115]))
+        elif patient.answer1 == "Belching/ burping/ heart burn / indigestion":
+            Test.objects.all()
+            list.append(str(test[80]))
+            list.append(str(test[115]))
+        elif patient.answer1 == "Constipation":
+            Test.objects.all()
+            list.append(str(test[115]))
+        elif patient.answer1 == "Diarrhoea less than 1week":
+            Test.objects.all()
+            list.append(str(test[4]))
+            list.append(str(test[8]))
+            list.append(str(test[116]))
+            list.append(str(test[117]))
+            list.append(str(test[116]))
+            list.append(str(test[93]))
+            list.append(str(test[94]))
+            list.append(str(test[118]))
+            list.append(str(test[119]))
+            list.append(str(test[120]))
+
+        elif patient.answer1 == "Diarrhoea more than 1 week":
+            Test.objects.all()
+            list.append(str(test[4]))
+            list.append(str(test[8]))
+            list.append(str(test[116]))
+            list.append(str(test[117]))
+            list.append(str(test[116]))
+            list.append(str(test[93]))
+            list.append(str(test[94]))
+            list.append(str(test[118]))
+            list.append(str(test[85]))
+            list.append(str(test[11]))
+            list.append(str(test[43]))
+            list.append(str(test[56]))
+            list.append(str(test[29]))
+            list.append(str(test[30]))
+            
+            if patient.age>50:
+                list.append(str(test[121]))
+                list.append(str(test[122]))
+
+
+        elif patient.answer1 == "Alternating diarrhoea and constipation":
+            Test.objects.all()
+            list.append(str(test[78]))
+        elif patient.answer1 == "Nausea/ vomiting":
+            Test.objects.all()
+            list.append(str(test[80]))
+            list.append(str(test[115]))
+        elif patient.answer1 == "Bloating/ Flatulance / Gas":
+            Test.objects.all()
+            list.append(str(test[80]))
+            if patient.age<30:
+                list.append(str(test[78]))
+        elif patient.answer1 == "Trouble digesting fatty food/ uneasy feeling after fatty meal":
+            Test.objects.all()
+            list.append(str(test[109]))
+            list.append(str(test[123]))
+            list.append(str(test[124]))
+            list.append(str(test[111]))
+            list.append(str(test[110]))
+        elif patient.answer1 == "Irritable bowel syndrome/ Irritable bowel disease/ know more":
+            Test.objects.all()
+            list.append(str(test[115]))
+            list.append(str(test[125]))
+            list.append(str(test[126]))
+            list.append(str(test[8]))
+
+        pk_id=request.session.get("pk_id")
+        pk_id=request.session.get("pk_id")
+        patient=Patient.objects.get(patient_id=pk_id)
+        patient.tests=list
+        patient.save()
+
+
 
 
     
