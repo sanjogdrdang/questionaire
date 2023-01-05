@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a style="color:red" class="navbar-brand" href="http://127.0.0.1:8000/">
+                <img src="https://www.drdangslab.com/images/logo-square.png" width="35" height="30" class="d-inline-block align-top" alt="">
+                      &nbsp;&nbsp; <strong> DR DANGS LAB</strong>
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="https://www.drdangslab.com/Packages.aspx"><button type="button" style="height:50px;width:250px" class="btn btn btn-lg  my-2"><i><strong><p style="color:red;">Towards better health</p></strong></i></button><br></a>
+         
+          <form class="d-flex" role="search">
+            <a href="https://www.drdangslab.com/"><button type="button" style="height:50px;width:250px" class="btn btn-outline-danger btn-lg  my-2"><p style="color:black">Go to website</p></button><br></a>
+           </form>
+          </div>
+        </div>
+      </nav>  
+</head>
+
+<style>
+  span{
+	font-size: 30px;
+	transform: translateY(20%);
+    display:inline-block;
+}
+    h2 {text-align: center;}
+    p {text-align: center;}
+    .text-center {
+  text-align: center;
+}
+    
+    </style>
+    
+  <body>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="container my-4">
+        
+        
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div class="container my-4">
+                <div class="container my-4">
+                  <span>
+                    <form action="respiratoryspecific1" method="POST">
+                      {% csrf_token %}
+              <h3>Choose any of the following which seems to trigger or cause the above symptoms</h3>
+              <br>
+            
+            </span>  
+            <p>(Please choose multiple options)</p>
+            </div>
+          
+            <button type="submit" name="Grass" value="Grass" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2"><p style="color:black">Grass</p></button>
+            <br>
+            <button type="submit" name="House Dust" value="House Dust" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg  my-2"><p style="color:black">House Dust</p></button><br>
+            <button type="submit" name="Hay" value="Hay" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2"><p style="color:black">Hay </p></button><br>
+            <button type="submit" name="Cats" value="Cats" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2"><p style="color:black">Cats</p></button><br>
+            <button type="submit" name="Dogs" value="Dogs" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Dogs</p></button><br>
+            <button type="submit" name="Moulds" value="Moulds" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Moulds</p></button><br>    
+            <button type="submit" name="Basement or Damp Area" value="Basement or Damp Area" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Basement or Damp Area</p></button><br>    
+            <button type="submit" name="Pollution or Smoke" value="Pollution or Smoke" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Pollution or Smoke</p></button><br>  
+            <button type="submit" name="Weather Changes" value="Weather Changes" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Weather Changes</p></button><br>  
+            <button type="submit" name="Exercise" value="Exercise" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Exercise</p></button><br>  
+            <button type="submit" name="Any Other" value="Any Other" style="height:50px;width:330px" class="btn btn-outline-danger btn-lg my-2 "><p style="color:black">Any Other</p></button><br>  
+          </form>
+          </div>
+
+                  
+           
+              
+            </div>
+          </form>
+            
+        
+            <div class="col">
+              <div class="carousel-inner">
+                <div class="container my-2">
+                <div class="carousel-item active">
+                  <img src="https://raw.githubusercontent.com/sanjogdrdang/SAMPLE/main/personaldetails1.png" width=500 height=450 class="d-block w-100" alt="...">
+                </div>
+      
+                </div>
+                
+              </div>
+            </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</html>
